@@ -52,9 +52,9 @@ if check_password():
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            # We gebruiken Flash voor snelheid en gratis limieten
+            # Aangepaste modelnaam om 404 te voorkomen
             model = genai.GenerativeModel(
-                model_name="gemini-1.5-flash",
+                model_name="models/gemini-1.5-flash",
                 system_instruction="""
                 Je bent de 'Lead Engineer & Project Controller' voor infrastructuurwerken in Vlaanderen. 
                 Je bent een expert in het SB250 (v5.0) en Vlario-richtlijnen.
