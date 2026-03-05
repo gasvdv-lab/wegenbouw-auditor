@@ -52,9 +52,9 @@ if check_password():
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            # Geüpdatet naar Gemini 2.0 Flash-Lite
+            # Stabiele alias voor Gemini 2.0 Flash-Lite
             model = genai.GenerativeModel(
-                model_name="gemini-2.0-flash-lite-preview-02-05",
+                model_name="gemini-2.0-flash-lite",
                 system_instruction="""
                 Je bent de 'Lead Engineer & Project Controller' voor infrastructuurwerken in Vlaanderen. 
                 Je bent een expert in het SB250 (v5.0) en Vlario-richtlijnen.
