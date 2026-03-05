@@ -52,9 +52,9 @@ if check_password():
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            # Aangepaste modelnaam om 404 te voorkomen
+            # Geüpdatet naar Gemini 2.0 Flash-Lite
             model = genai.GenerativeModel(
-                model_name="models/gemini-1.5-flash",
+                model_name="gemini-2.0-flash-lite-preview-02-05",
                 system_instruction="""
                 Je bent de 'Lead Engineer & Project Controller' voor infrastructuurwerken in Vlaanderen. 
                 Je bent een expert in het SB250 (v5.0) en Vlario-richtlijnen.
@@ -99,7 +99,7 @@ if check_password():
                     if not custom_query:
                         st.warning("Typ eerst een vraag.")
                     else:
-                        with st.spinner("De AI analyseert de documenten aan de hand van het SB250..."):
+                        with st.spinner("Gemini 2.0 analyseert de documenten..."):
                             try:
                                 # PDF data voorbereiden voor API
                                 pdf_parts = []
